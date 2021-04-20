@@ -8,7 +8,7 @@
 		<h1>Post containing "{{ query }}"</h1>
 		<h3>
 			{% with results.count as total_results %}
-				Found {{ total_results }} result {{ total_results|pluralize }}
+				Found {{ total_results }} result{{ total_results|pluralize }}
 			{% endwith %}
 		</h3>
 		{% for post in results %}
@@ -21,7 +21,7 @@
 	{% else %}
 		<h1>Search for posts</h1>
 		<form method="get">
-			{{ form.afs_p }}
+			{{ form.as_p }}
 			<input type="submit" value="Search">
 		</form>
 	{% endif %}
